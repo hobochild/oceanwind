@@ -9,6 +9,7 @@
   "scripts": {
     "start": "servor --browse --reload --editor",
     "build": "esbuild --bundle index.js --outfile=index.min.js --format=esm --minify",
+    "build:commonjs": "esbuild --bundle index.js --platform=node --outfile=index.cjs",
     "prepublish": "npm run build",
     "test": "node test/module.js && node test/ssr.js"
   },
